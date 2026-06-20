@@ -6,3 +6,101 @@
   padding: 0;
   font-family: "Rubik", sans-serif;
 }
+
+body {
+  background: #807ece;
+  margin: 80px auto;
+}
+
+.container {
+  background: #2d2a37;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  width: 50%;
+  max-width: 430px;
+  min-width: 350px;
+  margin: auto;
+  border-radius: 16px;
+  position: relative;
+}
+
+.visor {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 80px;
+  color: #6b6b6b;
+  text-align: end;
+  margin: 10px;
+}
+
+.visor .operation {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.result {
+  color: #fff;
+  font-size: 36px;
+}
+
+.result::before {
+  content: "=";
+  position: absolute;
+  left: 50px;
+  display: inline-block;
+  color: #6b6b6b;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.keyboard button {
+  background: #2d2a37;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  box-shadow: 1px 1px 6px 4px rgba(0, 0, 0, 0.2);
+  margin: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.keyboard button:hover {
+  transform: scale(1.1);
+  background: #322e3f;
+}
+
+.keyboard button:not(.clear):not(.zero) {
+  width: 64px;
+  height: 64px;
+}
+
+.keyboard button.clear {
+  grid-column: 2 / 4;
+}
+
+.keyboard button.zero {
+  grid-column: 1 / 3;
+}
+
+.keyboard button.btn-operation {
+  background: #462878;
+}
+
+.keyboard button.btn-operation:hover {
+  background: #542d94f1;
+}
+
+.keyboard button.btn-equal {
+  background: #7f45e2;
+}
+
+.keyboard button.btn-equal:hover {
+  background: #8a48fc;
+}

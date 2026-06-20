@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="visor">
-        <div class="operation"></div>
-        <div class="result"></div>
+        <div class="operation">1 + 1</div>
+        <div class="result">2</div>
       </div>
       <div class="keyboard">
         <button>CE</button>
-        <button>C</button>
+        <button class="clear">C</button>
         <button class="btn-operation">&divide;</button>
         <button>7</button>
         <button>8</button>
@@ -29,9 +29,9 @@
         <button>2</button>
         <button>3</button>
         <button class="btn-operation">+</button>
-        <button>0</button>
+        <button class="zero">0</button>
         <button>,</button>
-        <button class="equal">=</button>
+        <button class="btn-equal">=</button>
       </div>
     </div>
   </body>
