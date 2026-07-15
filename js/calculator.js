@@ -43,6 +43,13 @@ export default class Calculator {
     for (let i = 0; i < expression_length; i++) {
       let value = 0;
       if (expression[i] == "*" || expression[i] == "/") {
+        if (expression[i] == "/") {
+          if (expression[i + 1] == 0) {
+            this.result_expression =
+              "Não é possível dividir um número por zero.";
+            return this.result_expression;
+          }
+        }
         value = this.operator(
           expression[i],
           expression[i - 1],
