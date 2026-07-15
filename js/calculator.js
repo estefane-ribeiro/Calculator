@@ -78,7 +78,12 @@ export default class Calculator {
       }
     }
 
-    this.result_expression = expression[0];
+    let numero = expression[0];
+    if (numero.toString().split(".")[1]?.length > 12) {
+      this.result_expression = numero.toFixed(12);
+    } else {
+      this.result_expression = numero;
+    }
   }
 
   resultOperation() {
